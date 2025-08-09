@@ -1,13 +1,31 @@
-
 .navbar-brand {
   font-weight: bold;
+  color: var(--primary-color) !important; /* Primary blue color */
 }
 
-.ml-auto .nav-link {
-  color: #fff !important;
+.navbar {
+  background-color: var(--background-color) !important; /* White background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  padding-top: 15px; /* Added padding */
+  padding-bottom: 15px; /* Added padding */
+}
+
+.navbar .nav-link {
+  color: var(--text-color) !important; /* Dark text color */
   margin-right: 15px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  padding: 8px 12px; /* Initial padding */
+  border-radius: 5px; /* Rounded corners */
 }
 
-.ml-auto .nav-link:hover {
-  color: #ccc !important;
+.navbar .nav-link:hover {
+  color: var(--background-color) !important; /* White text on hover */
+  background-color: var(--primary-color) !important; /* Primary blue background on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Custom styles for NavDropdown hover */
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
 }

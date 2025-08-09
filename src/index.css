@@ -1,13 +1,151 @@
-body {
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --light-grey: #e0f2f7; /* Changed to a very light blue */
+  --dark-grey: #343a40;
+  --dark-overlay-color: rgba(0, 0, 0, 0.6);
+}
+
+body.dark {
+  --background-color: #333333;
+  --text-color: #f8f9fa;
+  --primary-color: #66b3ff;
+  --secondary-color: #adb5bd;
+  --light-grey: #1a1a1a; /* Changed to a very dark grey, almost black */
+  --dark-grey: #212529;
+  --dark-overlay-color: rgba(0, 0, 0, 0.8);
+}
+
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, var(--light-grey), var(--background-color)); /* Apply gradient to body */
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease; /* Transition background and color */
+}
+
+body.dark {
+  background: linear-gradient(to right, var(--dark-grey), var(--background-color)); /* Dark mode gradient */
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  color: var(--text-color) !important;
+}
+
+hr {
+  border-color: var(--text-color) !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* General styles for components to use theme variables */
+.navbar {
+  background-color: var(--background-color) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link {
+  color: var(--text-color) !important;
+}
+
+.navbar .nav-link:hover {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+.footer {
+  background-color: var(--dark-grey);
+  color: var(--text-color);
+}
+
+.footer .list-unstyled li a {
+  color: var(--text-color);
+}
+
+.footer .list-unstyled li a:hover {
+  color: var(--primary-color);
+}
+
+.social-icons .social-icon {
+  color: var(--text-color);
+}
+
+.social-icons .social-icon:hover {
+  color: var(--primary-color);
+}
+
+.hero-section {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.alternating-sections .bg-light {
+  background-color: var(--light-grey) !important;
+}
+
+.alternating-sections h2,
+.alternating-sections p {
+  color: var(--text-color);
+}
+
+.alternating-sections img {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.form-check-label {
+  color: var(--text-color) !important;
+}
+
+/* Badge theming */
+.badge-primary {
+  background-color: var(--primary-color) !important;
+  color: var(--background-color) !important;
+}
+
+.badge-secondary {
+  background-color: var(--secondary-color) !important;
+  color: var(--background-color) !important;
+}
+
+.badge-success {
+  background-color: var(--primary-color) !important; /* Using primary for success for consistency */
+  color: var(--background-color) !important;
+}
+
+/* Form control theming */
+.form-label {
+  color: var(--text-color) !important;
+}
+
+.form-control {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-color) !important;
+  opacity: 0.7; /* Adjust placeholder visibility */
 }

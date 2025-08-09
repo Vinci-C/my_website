@@ -9,7 +9,7 @@ const Contact = () => {
         <Row className="justify-content-center">
           <Col md={8}>
             <h2 className="text-center mb-4">Contact Me</h2>
-            <p className="text-center text-muted mb-5">
+            <p className="text-center mb-5">
               Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.
             </p>
             <Form>

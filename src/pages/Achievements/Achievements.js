@@ -1,28 +1,25 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 const Achievements = () => {
   return (
-    <div className="main-content">
-      <Container>
-        <h2>Achievements</h2>
-        <hr />
-        <ul>
-          <li>
-            <h5>First Place at Example Hackathon</h5>
-            <p>Developed a mobile app that solves a real-world problem in 24 hours.</p>
-          </li>
-          <li>
-            <h5>Published a Research Paper</h5>
-            <p>Co-authored a paper on the topic of machine learning, published in an esteemed journal.</p>
-          </li>
-          <li>
-            <h5>Dean's List</h5>
-            <p>Awarded for outstanding academic performance for three consecutive semesters.</p>
-          </li>
-        </ul>
-      </Container>
-    </div>
+    <>
+      <h2>Achievements</h2>
+      <hr />
+      <ul>
+        <li>
+          <h5>Cantonese Debating Team Captain</h5>
+          <p>Led the Cantonese Debating Team as Captain during Form 5.</p>
+        </li>
+        <li>
+          <h5>Chairman of the School's English Society</h5>
+          <p>Served as Chairman of the English Society from Form 2 to Form 5.</p>
+        </li>
+        <li>
+          <h5>School's Robotic Team Committee Member</h5>
+          <p>Contributed as a Committee Member of the School's Robotic Team from Form 3 to Form 4.</p>
+        </li>
+      </ul>
+    </>
   );
 };
 

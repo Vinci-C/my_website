@@ -1,7 +1,52 @@
+/* Default (Light Mode) styles for the footer */
 .footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid #e7e7e7;
+  background-color: #f8f9fa; /* Very light grey */
+  color: #333333; /* Dark text */
+  padding: 40px 0;
+  border-top: 1px solid #e7e7e7; /* Light border */
   margin-top: auto;
+}
+
+.footer h5 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.footer .list-unstyled li a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .list-unstyled li a:hover {
+  color: var(--primary-color); /* Uses primary color from root */
+}
+
+.social-icons .social-icon {
+  color: #333333;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+  color: var(--primary-color); /* Uses primary color from root */
+}
+
+/* Dark Mode styles for the footer */
+body.dark .footer {
+  background-color: var(--dark-grey); /* Dark background from theme variable */
+  color: var(--text-color); /* Light text from theme variable */
+  border-top-color: var(--light-grey); /* Light border for dark mode */
+}
+
+body.dark .footer h5,
+body.dark .footer p,
+body.dark .footer .list-unstyled li a,
+body.dark .social-icons .social-icon {
+  color: var(--text-color); /* Light text from theme variable */
 }
