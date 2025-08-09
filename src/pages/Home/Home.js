@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Container, Button, Image, Row, Col, Card } from 'react-bootstrap';
+import { Container, Button, Image, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -28,45 +27,57 @@ const Home = () => {
         </Container>
       </div>
 
-      <div className="summary-section">
-        <Container>
-          <h2 className="text-center mb-5">A Glimpse Into My Journey</h2>
-          <Row>
-            <Col md={4} className="mb-4">
-              <Card className="h-100">
-                <Card.Body>
-                  <Card.Title>Education</Card.Title>
-                  <Card.Text>
-                    A brief overview of my academic background and qualifications.
-                  </Card.Text>
-                  <Button variant="primary" as={Link} to="/education">Learn More</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4} className="mb-4">
-              <Card className="h-100">
-                <Card.Body>
-                  <Card.Title>Projects</Card.Title>
-                  <Card.Text>
-                    A collection of my most significant projects, showcasing my skills.
-                  </Card.Text>
-                  <Button variant="primary" as={Link} to="/projects">Learn More</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4} className="mb-4">
-              <Card className="h-100">
-                <Card.Body>
-                  <Card.Title>Experience</Card.Title>
-                  <Card.Text>
-                    A summary of my professional experience and key responsibilities.
-                  </Card.Text>
-                  <Button variant="primary" as={Link} to="/experience">Learn More</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
+      <div className="alternating-sections">
+        <section className="section">
+          <Container>
+            <Row className="align-items-center">
+              <Col md={6}>
+                <Image src="https://picsum.photos/600/400?random=1" rounded fluid />
+              </Col>
+              <Col md={6}>
+                <h2>Education</h2>
+                <p>
+                  My educational background has provided me with a strong foundation in computer science and software development.
+                </p>
+                <Button variant="primary" as={Link} to="/education">Learn More</Button>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section className="section bg-light">
+          <Container>
+            <Row className="align-items-center">
+              <Col md={6} className="order-md-2">
+                <Image src="https://picsum.photos/600/400?random=2" rounded fluid />
+              </Col>
+              <Col md={6} className="order-md-1">
+                <h2>Projects</h2>
+                <p>
+                  I've worked on a variety of projects, from personal hobby projects to large-scale enterprise applications.
+                </p>
+                <Button variant="primary" as={Link} to="/projects">Learn More</Button>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section className="section">
+          <Container>
+            <Row className="align-items-center">
+              <Col md={6}>
+                <Image src="https://picsum.photos/600/400?random=3" rounded fluid />
+              </Col>
+              <Col md={6}>
+                <h2>Experience</h2>
+                <p>
+                  I have a proven track record of success in the software development industry.
+                </p>
+                <Button variant="primary" as={Link} to="/experience">Learn More</Button>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       </div>
     </div>
   );

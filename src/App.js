@@ -8,6 +8,7 @@ import Achievements from './pages/Achievements/Achievements';
 import Projects from './pages/Projects/Projects';
 import Skills from './pages/Skills/Skills';
 import Experience from './pages/Experience/Experience';
+import Contact from './pages/Contact/Contact';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

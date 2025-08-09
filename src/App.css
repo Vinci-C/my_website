@@ -7,3 +7,8 @@
 .content-wrap {
   flex: 1;
 }
+
+.main-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
