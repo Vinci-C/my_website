@@ -1,0 +1,13 @@
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.ml-auto .nav-link {
+  color: #fff !important;
+  margin-right: 15px;
+}
+
+.ml-auto .nav-link:hover {
+  color: #ccc !important;
+}
